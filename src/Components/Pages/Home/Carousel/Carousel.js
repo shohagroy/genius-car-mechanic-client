@@ -42,7 +42,7 @@ const Carousel = () => {
   ];
   return (
     <div>
-      <div className="carousel w-full h-[600px] object-cover rounded-xl">
+      <div className="carousel w-full mb-[130px] h-[600px] object-cover rounded-xl">
         {carouselImages.map((img) => (
           <CarosuelCard key={img.id} carousel={img} />
         ))}
