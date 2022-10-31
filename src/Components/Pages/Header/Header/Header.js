@@ -115,7 +115,7 @@ const Header = () => {
           </span>
           <button
             type="button"
-            className="px-8 py-3 text-[18px] font-semibold font-semibold border rounded border-[#FF3811] text-[#FF3811]"
+            className="px-8 hover:text-white hover:bg-[#FF3811] py-3 text-[18px] font-semibold font-semibold border rounded border-[#FF3811] text-[#FF3811]"
           >
             Appointment
           </button>
