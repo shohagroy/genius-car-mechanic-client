@@ -1,26 +1,25 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import ServiceCard from "./ServiceCard";
+import Produt from "./Produt";
 
-const Servicce = () => {
-  const [servies, setServices] = useState([]);
+const PopularProduct = () => {
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("services.json")
+    fetch("Product.json")
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => setProducts(data));
   }, []);
-
   return (
     <div>
       <div>
         <div className="text-center w-[718px] mx-auto">
           <p className="text-[20px] font-bold text-[#ff3811] mt-[130px] mb-[10px] ">
-            Service
+            Popular Products
           </p>
           <h3 className="font-bold text-[45px] text-[#151515]">
-            Our Service Area
+            Browse Our Products
           </h3>
           <p className="capitalize p-[20px] text-[#737373] mb-[50px]">
             the majority have suffered alteration in some form, by injected
@@ -29,8 +28,8 @@ const Servicce = () => {
           </p>
         </div>
         <div className="grid grid-cols-3 gap-[25px]">
-          {servies.map((servie) => (
-            <ServiceCard key={servie._id} servies={servie} />
+          {products.map((product) => (
+            <Produt key={product._id} product={product} />
           ))}
         </div>
       </div>
@@ -46,4 +45,4 @@ const Servicce = () => {
   );
 };
 
-export default Servicce;
+export default PopularProduct;
