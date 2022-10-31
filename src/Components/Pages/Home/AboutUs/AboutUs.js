@@ -19,12 +19,12 @@ const AboutUs = () => {
       </div>
       <div>
         <div>
-          <p className="text-[20px] font-bold text-[#ff3811] mb-2 ">
+          <p className="text-[20px] font-bold text-[#ff3811] mb-4 ">
             About Us <br />
-            <span className="font-bold text-[45px] text-[#151515]">
-              We are qualified <br /> & of experience <br /> in this field
-            </span>
           </p>
+          <h3 className="font-bold text-[45px] text-[#151515]">
+            We are qualified <br /> & of experience <br /> in this field
+          </h3>
 
           <p className="py-3 text-[#737373]">
             There are many variations of passages of Lorem Ipsum available, but
@@ -32,7 +32,7 @@ const AboutUs = () => {
             humour, or randomised words which don't look even slightly
             believable.
           </p>
-          <p className="text-[#737373]">
+          <p className="text-[#737373] py-4">
             the majority have suffered alteration in some form, by injected
             humour, or randomised words which don't look even slightly
             believable.{" "}
