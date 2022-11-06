@@ -37,7 +37,7 @@ const Testimonial = () => {
                 </p>
               </div>
               <div className="text-6xl text-[#ff3811]">
-                <i class="fa-sharp fa-solid fa-quote-right"></i>
+                <i className="fa-sharp fa-solid fa-quote-right"></i>
               </div>
             </div>
             <div>
@@ -48,11 +48,11 @@ const Testimonial = () => {
                 slightly believable.
               </p>
               <div className="text-[24px] text-[#FF912C]">
-                <i class="fa-solid p-1 fa-star"></i>
-                <i class="fa-solid p-1 fa-star"></i>
-                <i class="fa-solid p-1 fa-star"></i>
-                <i class="fa-solid p-1 fa-star"></i>
-                <i class="fa-solid p-1 fa-star"></i>
+                <i className="fa-solid p-1 fa-star"></i>
+                <i className="fa-solid p-1 fa-star"></i>
+                <i className="fa-solid p-1 fa-star"></i>
+                <i className="fa-solid p-1 fa-star"></i>
+                <i className="fa-solid p-1 fa-star"></i>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ const Testimonial = () => {
                 </p>
               </div>
               <div className="text-6xl text-[#ff3811]">
-                <i class="fa-sharp fa-solid fa-quote-right"></i>
+                <i className="fa-sharp fa-solid fa-quote-right"></i>
               </div>
             </div>
             <div>
@@ -86,11 +86,11 @@ const Testimonial = () => {
                 slightly believable.
               </p>
               <div className="text-[24px] text-[#FF912C]">
-                <i class="fa-solid p-1 fa-star"></i>
-                <i class="fa-solid p-1 fa-star"></i>
-                <i class="fa-solid p-1 fa-star"></i>
-                <i class="fa-solid p-1 fa-star"></i>
-                <i class="fa-solid p-1 fa-star"></i>
+                <i className="fa-solid p-1 fa-star"></i>
+                <i className="fa-solid p-1 fa-star"></i>
+                <i className="fa-solid p-1 fa-star"></i>
+                <i className="fa-solid p-1 fa-star"></i>
+                <i className="fa-solid p-1 fa-star"></i>
               </div>
             </div>
           </div>

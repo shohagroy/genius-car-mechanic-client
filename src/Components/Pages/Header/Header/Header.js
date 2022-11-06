@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../../../assets/logo.svg";
+import { AuthProvaider } from "../../../GobalContext/GobalContext";
 
 const Header = () => {
+  const { userSignOut, user } = useContext(AuthProvaider);
+
   return (
     <div>
-      <div className="navbar bg-base-100 my-[50px]">
+      <div className="navbar bg-base-100 my-[50px] max-w-[1140px] mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -71,12 +74,24 @@ const Header = () => {
             <NavLink className="p-3 m-2" to="/">
               Service
             </NavLink>
-            <NavLink className="p-3 m-2" to="/">
-              Blog
+            <NavLink className="p-3 m-2" to="/order">
+              Order
             </NavLink>
             <NavLink className="p-3 m-2" to="/">
               Contact
             </NavLink>
+            <NavLink
+              to="/login"
+              className={`p-3 m-2 ${user.email ? "hidden" : "block"}`}
+            >
+              Login
+            </NavLink>
+            <button
+              onClick={userSignOut}
+              className={`p-3 m-2 ${user.email ? "block" : "hidden"}`}
+            >
+              Log out
+            </button>
           </ul>
         </div>
         <div className="navbar-end text-black">

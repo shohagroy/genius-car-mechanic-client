@@ -10,7 +10,7 @@ import OurTeam from "./OurTeam/OurTeam";
 
 const Home = () => {
   return (
-    <div>
+    <div className="max-w-[1140px] mx-auto">
       <Carousel />
       <AboutUs />
       <Servicce />

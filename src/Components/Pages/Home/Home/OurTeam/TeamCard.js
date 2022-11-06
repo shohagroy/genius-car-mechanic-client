@@ -14,10 +14,10 @@ const TeamCard = ({ team }) => {
           <p>{expert}</p>
         </div>
         <div className="text-center flex justify-center items-center my-[10px] text-3xl">
-          <i class="p-2 mx-2 bg-[#FF3811] text-white rounded-full fa-brands fa-facebook"></i>
-          <i class="p-2 mx-2 bg-[#FF3811] text-white rounded-full fa-brands fa-twitter"></i>
-          <i class="p-2 mx-2 bg-[#FF3811] text-white rounded-full fa-brands fa-linkedin-in"></i>
-          <i class="p-2 mx-2 bg-[#FF3811] text-white rounded-full fa-brands fa-instagram"></i>
+          <i className="p-2 mx-2 bg-[#FF3811] text-white rounded-full fa-brands fa-facebook"></i>
+          <i className="p-2 mx-2 bg-[#FF3811] text-white rounded-full fa-brands fa-twitter"></i>
+          <i className="p-2 mx-2 bg-[#FF3811] text-white rounded-full fa-brands fa-linkedin-in"></i>
+          <i className="p-2 mx-2 bg-[#FF3811] text-white rounded-full fa-brands fa-instagram"></i>
         </div>
       </div>
     </div>

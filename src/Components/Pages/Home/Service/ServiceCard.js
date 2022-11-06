@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ servies }) => {
-  const { img, price, title, service_id } = servies;
+  const { img, price, title, _id } = servies;
 
-  console.log(service_id);
   return (
     <div>
       <div className="p-5 border rounded-xl">
@@ -17,7 +17,7 @@ const ServiceCard = ({ servies }) => {
         </h3>
         <div className="flex justify-between text-[20px] items-center font-semibold text-[#FF3811]">
           <p>Price: ${price}</p>
-          <button>
+          <Link to={`/services/${_id}`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -32,7 +32,7 @@ const ServiceCard = ({ servies }) => {
                 d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
               />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
