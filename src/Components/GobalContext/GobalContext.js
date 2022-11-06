@@ -49,6 +49,7 @@ const GobalContext = ({ children }) => {
     signOut(auth)
       .then(() => {
         setUser("");
+        localStorage.removeItem("genius_token");
       })
       .catch((error) => {
         console.error(error);

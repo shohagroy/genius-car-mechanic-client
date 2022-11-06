@@ -28,7 +28,7 @@ const CheckOut = () => {
 
     setOrderDetails(order);
 
-    fetch("http://localhost:5000/orders", {
+    fetch("https://genius-car-mechanic-server.vercel.app/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(order),

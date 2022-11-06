@@ -21,13 +21,12 @@ const Login = () => {
       .then((result) => {
         // Signed in
         const user = result.user;
-        console.log(user);
         if (user) {
           const currentUser = {
             email: user.email,
           };
 
-          fetch("http://localhost:5000/jwt", {
+          fetch("https://genius-car-mechanic-server.vercel.app/jwt", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -36,11 +35,9 @@ const Login = () => {
           })
             .then((res) => res.json())
             .then((data) => {
-              console.log(data);
               localStorage.setItem("genius_token", data.token);
+              navigate(path, { relative: true });
             });
-
-          navigate(path, { relative: true });
         }
         // ...
       })

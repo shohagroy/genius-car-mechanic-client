@@ -5,24 +5,30 @@ import Banar from "../ServiceDetails/Banar";
 import swal from "sweetalert";
 
 const Order = () => {
-  const { user, logOut } = useContext(AuthProvaider);
+  const { user, userSignOut } = useContext(AuthProvaider);
 
   const [orders, setOrders] = useState([]);
   const [deleted, setDeleted] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user?.email}`, {
-      headers: {
-        authorazitation: `Bearer ${localStorage.getItem("genius_token")}`,
-      },
-    }).then((res) => {
-      console.log(res);
-      return res.json();
-    });
-    // .then((data) => {
-    //   setOrders(data);
-    //   setDeleted(false);
-    // });
+    fetch(
+      `https://genius-car-mechanic-server.vercel.app/orders?email=${user?.email}`,
+      {
+        headers: {
+          authorazitation: `Bearer ${localStorage.getItem("genius_token")}`,
+        },
+      }
+    )
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          userSignOut();
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setOrders(data);
+        setDeleted(false);
+      });
   }, [user, deleted]);
 
   const orderDeletedhandelar = (email, id) => {
@@ -34,9 +40,12 @@ const Order = () => {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        fetch(`http://localhost:5000/deleted?email=${email}&id=${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://genius-car-mechanic-server.vercel.app/deleted?email=${email}&id=${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data) {
